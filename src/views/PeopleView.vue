@@ -42,13 +42,16 @@ const route = useRoute();
 const list = ref();
 console.log(route);
 
-onMounted(async () => {
+const getPeopleCovers = async () => {
   covers.value = await (
     await fetch(`http://127.0.0.1:5173/api/get_face_covers`)
   ).json();
   if (covers.value.length > 0) {
     current_select_id.value = covers.value[0].face_category_id;
   }
+};
+onMounted(() => {
+  getPeopleCovers();
 });
 
 function change_select(new_select_id) {
@@ -90,6 +93,7 @@ async function deleteImage(index) {
     })
   ).text();
   list.value.splice(index, 1);
+  getPeopleCovers();
 }
 </script>
 <style lang="scss" scoped>
