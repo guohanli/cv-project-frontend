@@ -1,0 +1,11 @@
+@import './base.css';
+@import './csshake.css';
+
+body{
+  background: url('/src/assets/imgs/background.png');
+  background-size: cover;
+}
+
+svg {
+  cursor: pointer;
+}
