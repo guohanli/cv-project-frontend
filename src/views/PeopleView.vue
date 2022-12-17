@@ -83,7 +83,7 @@ function changeOperate() {
 }
 
 async function deleteImage(index) {
-  await (
+  const next_id = await (
     await fetch(`http://127.0.0.1:5173/api/delete_image`, {
       method: "POST",
       headers: {
@@ -92,8 +92,18 @@ async function deleteImage(index) {
       body: JSON.stringify(list.value[index].id),
     })
   ).text();
+  list.value[index];
   list.value.splice(index, 1);
-  getPeopleCovers();
+
+  covers.value = await (
+    await fetch(`http://127.0.0.1:5173/api/get_face_covers`)
+  ).json();
+
+  if (next_id !== "") {
+    current_select_id.value = next_id;
+  } else if (covers.value.length > 0) {
+    current_select_id.value = covers.value[0].face_category_id;
+  }
 }
 </script>
 <style lang="scss" scoped>
