@@ -1,41 +1,22 @@
-# digital-album-frontend
+# CS272 Project AI Album Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+This repository holds the frontend part for the ShanghaiTech University CS272 Computer Vision Ⅱ course project. The project is a web-based AI album that allows users to upload images and view the AI-generated album.
 
-## Recommended IDE Setup
+## Install
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+In the project root directory, run the following command to install the required dependencies.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+Run the following command to start the project.
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Demo
 
-```sh
-npm run build
-```
+Below is a demo video of the project. You can click the cover image to watch the video.
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+[![Watch the video](https://lgh-markdown-images.oss-cn-shanghai.aliyuncs.com/img/202408302118962.png)](https://lgh-markdown-images.oss-cn-shanghai.aliyuncs.com/img/202408302109049.mp4)
